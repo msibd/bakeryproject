@@ -46,6 +46,8 @@ body[data-project="optical"]{--com-accent:#0e4f5c;--com-soft:#e8f3f4}
 .pc .add:disabled{opacity:.55;cursor:not-allowed}
 .com-promo-strip{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:9px 22px;background:var(--com-soft);color:var(--com-accent);border-bottom:1px solid color-mix(in srgb,var(--com-accent) 22%,white);font-size:13px}
 .com-promo-strip button{border:1px solid var(--com-accent);background:#fff;color:var(--com-accent);border-radius:999px;padding:5px 11px;font:inherit;font-weight:700;cursor:pointer}
+.com-promo-strip .com-countdown{display:inline-flex;align-items:center;white-space:nowrap;border-radius:999px;background:var(--com-accent);color:#fff;padding:6px 11px;font-variant-numeric:tabular-nums;font-weight:700}
+body[data-project="bakery"] .com-promo-strip strong{flex:1 1 220px}
 .com-offer-badge{display:inline-block;width:max-content;max-width:100%;margin:4px 0 2px;padding:2px 7px;border-radius:5px;background:var(--com-accent);color:#fff;font-size:11px;font-weight:700}
 .pc .pr del{color:#8b8b8b;font-weight:400;font-size:.85em}.pc .pr strong{color:var(--com-accent)}
 .com-detail-offer{display:inline-block;margin:5px 0 10px;padding:7px 10px;border-radius:8px;background:var(--com-soft);color:var(--com-accent);font-size:13px;font-weight:700}
