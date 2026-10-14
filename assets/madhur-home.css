@@ -251,3 +251,11 @@ body[data-project="bakery"] #p2,body[data-project="bakery"] #p3{--dash-burgundy:
 .madhur-hero .hb{margin-top:20px}
 @media(max-width:900px){.madhur-hero-media{right:4%;width:42%}.madhur-hero-copy{max-width:51%}}
 @media(max-width:600px){.madhur-site .madhur-hero{min-height:525px;align-items:flex-end;padding:222px 18px 68px;background:#510813 radial-gradient(circle at 50% 15%,#852431,#510813 67%)}.madhur-site .madhur-hero.is-first{min-height:460px;padding-top:155px;background-image:linear-gradient(0deg,#510813 0%,rgba(81,8,19,.86) 46%,rgba(81,8,19,.18) 100%),url('madhur-hero.webp');background-position:center;background-size:cover}.madhur-hero-media{top:15px;left:18px;right:18px;bottom:auto;width:auto;height:190px;border-radius:15px}.madhur-hero-copy{max-width:100%}.madhur-hero h2{font-size:clamp(37px,10vw,51px)}.madhur-hero .hb{margin-top:15px}}
+
+/* Fill each product rail with whole cards at every viewport width. */
+.madhur-site .rail{gap:12px;scroll-padding-inline:22px}
+.madhur-site .rail .pc{flex:0 0 calc((100% - 60px)/6);max-width:none;min-width:0}
+@media(max-width:1200px){.madhur-site .rail .pc{flex-basis:calc((100% - 48px)/5)}}
+@media(max-width:900px){.madhur-site .rail .pc{flex-basis:calc((100% - 36px)/4)}}
+@media(max-width:700px){.madhur-site .rail .pc{flex-basis:calc((100% - 12px)/2)}}
+@media(max-width:960px){.madhur-site .rail{scroll-padding-inline:34px}}

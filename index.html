@@ -298,7 +298,7 @@ svg{vertical-align:-3px}
 @media (max-width:760px){.pv{padding:12px 12px 18px}.pvt{font-size:24px}.pvdl b{flex:0 0 100%}}
 </style>
 <link rel="stylesheet" href="assets/commerce.css?v=madhur-1">
-<link rel="stylesheet" href="assets/madhur-home.css?v=product-hero-8">
+<link rel="stylesheet" href="assets/madhur-home.css?v=filled-catalog-9">
 </head>
 <body data-project="bakery">
 <main class="wrap">
@@ -320,12 +320,13 @@ var I={check:'<path d="M5 12l5 5L20 7"/>',bag:'<path d="M6 8h12l-1 12H7z"/><path
 
 IMG.almond='assets/almond-loaf.png';
 Object.assign(IMG,{rasgulla:'assets/madhur-rasgulla.webp',gulab:'assets/madhur-gulab.webp',sondesh:'assets/madhur-sandesh.webp',chamcham:'assets/madhur-chamcham.webp',truffle:'assets/madhur-chocolate-cake.webp',assortedcookies:'assets/madhur-cookies.webp'});
+Object.assign(IMG,{chocdanish:'assets/madhur-chocolate-danish.webp',strawberrydanish:'assets/madhur-strawberry-danish.webp',creampuff:'assets/madhur-cream-puff.webp',cinnamonroll:'assets/madhur-cinnamon-roll.webp',cheesebun:'assets/madhur-cheese-bun.webp',brioche:'assets/madhur-brioche-loaf.webp'});
 /* ================= TAB 1: HOMEPAGE ================= */
 var CATS=[
 ['dessert','Dessert',[['Black Forest Cake','2200','blackforest'],['Tiramisu Cup','150','tiramisu'],['Cheese Cake','325','cheesecake'],['Chocolate Moss','60','chocmoss'],['Blueberry Cake','66.80','blueberry']]],
 ['sweets','Sweets',[['Rasgulla Box','80','rasgulla'],['Rasogolla (Premium)','320','rasgulla'],['Gulab Jamun','50','gulab'],['Kalo Jam (Rosogolla)','340','gulab'],['Sondesh','50','sondesh'],['Chamcham','360','chamcham'],['Kheer Sandesh','380','sondesh'],['Specialized Sweet','30','sweet'],['Specialized Boxes','40','boxes']]],
-['pastry','Pastry',[['Fruit Tart','60','fruittart'],['Eclairs','80','eclair'],['Almond Bread','130','almond'],['Slice Cake','60','slice'],['Fruit Cake','60','fruitcake']]],
-['bakery','Bakery',[['Classic Croissant','60','croissant'],['Pain au Chocolat','68.30','painchoc'],['Almond Croissant','80','almondbread'],['Milk Bread','60','milkbread'],['Garlic Bread Stick','60','garlic']]],
+['pastry','Pastry',[['Fruit Tart','60','fruittart'],['Eclairs','80','eclair'],['Almond Bread','130','almond'],['Slice Cake','60','slice'],['Fruit Cake','60','fruitcake'],['Chocolate Danish','120','chocdanish'],['Strawberry Danish','140','strawberrydanish'],['Cream Puff','110','creampuff']]],
+['bakery','Bakery',[['Classic Croissant','60','croissant'],['Pain au Chocolat','68.30','painchoc'],['Almond Croissant','80','almondbread'],['Milk Bread','60','milkbread'],['Garlic Bread Stick','60','garlic'],['Cinnamon Roll','130','cinnamonroll'],['Cheese Bun','110','cheesebun'],['Brioche Loaf','180','brioche']]],
 ['snacks','Snacks',[['Macarons Set','600','macaron'],['Oatmeal Cookie','68.30','oatmeal'],['Chocolate Chip Cookie','150','cookie'],['Assorted Bakery Cookies','420','assortedcookies'],['Cupcakes (Assorted)','22','cupcake'],['Savory Rolls','60','rolls']]]
 ];
 CATS[0][2].push(['Chocolate Truffle Cake','1200','truffle']);
@@ -528,7 +529,7 @@ if(t.matches('[data-madhur-cta]')){cvOpen(MADHUR_HERO_SLIDES[madhurHeroIndex].ca
 if(t.matches('.hb .p')){cvOpen('dessert');return}
 if(t.matches('.hb .s')){cvOpen('all');return}
 if(t.classList.contains('add')){cartN++;$('cn').textContent=cartN;toast(t.getAttribute('data-n')+' কার্টে যোগ হয়েছে');return}
-if(t.classList.contains('arr')){var r=t.parentNode.querySelector('.rail');r.scrollBy({left:parseInt(t.getAttribute('data-d'))*r.clientWidth*.8,behavior:'smooth'});return}
+if(t.classList.contains('arr')){var r=t.parentNode.querySelector('.rail'),card=r.querySelector('.pc'),style=getComputedStyle(r),gap=parseFloat(style.gap)||0,step=card.getBoundingClientRect().width+gap,inner=r.clientWidth-parseFloat(style.paddingLeft)-parseFloat(style.paddingRight),visible=Math.max(1,Math.round((inner+gap)/step)),index=Math.round(r.scrollLeft/step);r.scrollTo({left:(index+parseInt(t.getAttribute('data-d'))*visible)*step,behavior:'smooth'});return}
 if(t.id==='hp'){heroI=(heroI+HS.length-1)%HS.length;hvRender();return}
 if(t.id==='hn2'){heroI=(heroI+1)%HS.length;hvRender();return}
 if(t.classList.contains('dt')){var k=[].indexOf.call(document.querySelectorAll('.hctl .dt'),t);heroI=k;hvRender();return}
