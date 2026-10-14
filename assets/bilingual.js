@@ -41,7 +41,7 @@
     'Pending':'অপেক্ষমাণ','Confirmed':'নিশ্চিত','Preparing':'প্রস্তুত হচ্ছে','Delivered':'পৌঁছেছে','Cancelled':'বাতিল',
     'Paid':'পরিশোধিত','Home Page':'হোমপেজ','Homepage':'হোমপেজ','Profile':'প্রোফাইল','Settings':'সেটিংস',
     'All':'সব','All prices':'সব দাম','Sort by':'সাজান',
-    'Delivering to':'ডেলিভারি এলাকা','Dhaka ⌄':'ঢাকা ⌄','Fresh Sweets':'তাজা মিষ্টি','Gift Boxes':'উপহার বাক্স',
+    'Delivering to':'ডেলিভারি এলাকা','Dhaka ⌄':'ঢাকা ⌄','Fresh Sweets':'তাজা মিষ্টি','Gift Boxes':'উপহার বাক্স','Customer Dashboard':'ক্রেতার ড্যাশবোর্ড',
     'A Taste of Tradition':'ঐতিহ্যের স্বাদ','Account':'অ্যাকাউন্ট','Cart':'কার্ট',
     'TRADITIONAL SWEETS':'ঐতিহ্যবাহী মিষ্টি','FRESHLY MADE':'তাজা তৈরি','PERFECT FOR EVERY OCCASION':'সব অনুষ্ঠানের জন্য',
     'Share a little':'ভাগ করে নিন একটু','sweetness':'মিষ্টি আনন্দ',

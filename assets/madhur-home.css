@@ -71,3 +71,87 @@ body[data-project="bakery"] .wrap>.tabs{margin:8px clamp(18px,2.5vw,38px)}
 @media(max-width:1200px){.madhur-site .madhur-header{gap:12px;padding-inline:22px}.madhur-header .hn{gap:8px}.madhur-header .hn a{font-size:13px}.madhur-top>div:nth-child(2){display:none}.madhur-pick-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:760px){.madhur-site .madhur-header{flex-wrap:wrap;gap:8px}.madhur-header .lg{min-width:130px}.madhur-word{font-size:31px}.madhur-header .hn{order:3;flex:0 0 100%;overflow-x:auto;justify-content:flex-start}.madhur-header .srch{order:4;flex:1 1 100%;max-width:none}.madhur-header .madhur-account{margin-left:auto}.madhur-header .langbar{order:5}.madhur-site .madhur-hero{min-height:390px;background-position:64% center}.madhur-hero-copy{max-width:380px}.madhur-hero h2{font-size:53px}.madhur-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.madhur-pick-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.madhur-benefits{grid-template-columns:repeat(2,1fr);row-gap:15px}.madhur-benefits>div:nth-child(2){border-right:0}}
 @media(max-width:480px){.madhur-site .madhur-top{padding:7px 12px;font-size:11px}.madhur-top>div:last-child{display:none}.madhur-site .madhur-hero{min-height:425px;background-image:linear-gradient(90deg,rgba(91,5,17,.84),rgba(91,5,17,.33)),url('madhur-hero.webp');background-position:65% center}.madhur-hero h2{font-size:49px}.madhur-hero-perks{gap:8px;font-size:10px}.madhur-section-title>div{display:block}.madhur-section-title h2{font-size:28px}.madhur-section-title p{margin-top:5px}.madhur-tile strong{font-size:15px}.madhur-benefits b{font-size:12px}.madhur-benefits>div{padding:0 8px}}
+
+/* Storefront navigation and prominent dashboard entry points. */
+.madhur-site .madhur-top .madhur-top-actions{display:flex;flex-wrap:nowrap;gap:7px;border:0;padding:0}
+.madhur-site .madhur-top-actions button{margin:0;border:1px solid #f2d29c;background:#f7d69c;color:#540814;border-radius:6px;font-weight:700;white-space:nowrap;padding:5px 10px;box-shadow:0 2px 7px #30030855}
+.madhur-site .madhur-top-actions button:last-child{background:#fffaf0;border-color:#fffaf0}
+.madhur-site .madhur-top-actions button:hover,.madhur-site .madhur-top-actions button:focus-visible{background:#fff;color:#650813}
+.madhur-header .hn{gap:clamp(5px,.8vw,12px)}
+.madhur-header .hn a{font-size:clamp(12px,.95vw,15px)}
+.madhur-header .hn a:focus-visible{outline:2px solid #a81928;outline-offset:3px}
+.madhur-site .madhur-header{gap:clamp(8px,1vw,17px);padding-inline:clamp(18px,2.5vw,38px)}
+.madhur-header .lg{min-width:150px}
+.madhur-header .srch{flex-basis:300px;min-width:160px}
+.madhur-header .langbar{margin-left:0}
+
+/* The two demo dashboards use the same burgundy, gold and cream palette. */
+body[data-project="bakery"] #p2,body[data-project="bakery"] #p3{--dash-burgundy:#650813;--dash-red:#8b1421;--dash-cream:#fffaf4;--dash-gold:#e7b768;--dash-border:#e6d7c9}
+#p2 .scr,#p3 .scr{background:var(--dash-cream);color:#35151a}
+#p2 .mock,#p3 .mock{border:1px solid var(--dash-border);box-shadow:0 12px 35px #65081312}
+#p2 .hdr,#p3 .hdr{background:#fffdf9;border-bottom:2px solid var(--dash-gold)}
+#p2 .admbar,#p3 .admbar{background:var(--dash-burgundy);color:#fff7eb}
+#p2 .side,#p3 .side{background:#fff9f0;border-right:1px solid var(--dash-border)}
+#p2 .main,#p3 .main{background:#fffaf4}
+#p2 .card,#p3 .card{background:#fff;border-color:var(--dash-border)}
+#p2 .si.on,#p3 .si.on,#p2 .pill.on,#p3 .pill.on{background:#f9e6cf;color:var(--dash-burgundy);border-color:#e7b768}
+#p2 .mar,#p3 .mar,#p2 .logo,#p3 .logo{color:var(--dash-burgundy)}
+#p2 .btn,#p3 .btn,#p2 .tab.on,#p3 .tab.on{background:var(--dash-burgundy);color:#fff}
+#p2 .btn2,#p3 .btn2{border-color:var(--dash-burgundy);color:var(--dash-burgundy)}
+#p2 .chip.on,#p3 .chip.on{background:var(--dash-burgundy);border-color:var(--dash-burgundy);color:#fff}
+#p2 .stage,#p3 .stage{min-width:0}
+
+@media(max-width:1350px){
+ .madhur-site .madhur-header{flex-wrap:wrap;gap:8px 14px}
+ .madhur-header .hn{order:3;flex:0 0 100%;justify-content:center;overflow-x:auto;scrollbar-width:none}
+ .madhur-header .srch{flex:1 1 260px;max-width:none}
+ .madhur-site .madhur-top{padding-inline:22px}
+ .madhur-site .madhur-top-message{display:none}
+}
+@media(max-width:900px){
+ .madhur-site .madhur-header{padding-inline:18px}
+ .madhur-header .lg{min-width:135px}
+ .madhur-header .hn{justify-content:flex-start}
+ .madhur-tiles{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .madhur-pick-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .madhur-benefits{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .madhur-benefits>div:nth-child(2){border-right:0}
+}
+@media(max-width:760px){
+ .madhur-site .madhur-top{gap:8px;flex-wrap:wrap;justify-content:center}
+ .madhur-site .madhur-top .madhur-top-actions{display:flex;justify-content:center;width:100%}
+ .madhur-header .hn{order:3;flex:0 0 100%;justify-content:flex-start}
+ .madhur-header .hn a{flex:none;font-size:14px}
+ .madhur-header .srch{order:4;flex:1 1 100%;max-width:none}
+ .madhur-header .langbar{order:2;margin-left:auto}
+ .madhur-header .madhur-account{order:1;margin-left:0}
+ .madhur-header .cartf{order:1}
+ #p2 .mock,#p3 .mock{min-width:0}
+ #p2 .mockwrap,#p3 .mockwrap{max-width:100%;overflow-x:auto}
+ #p2 .shell,#p3 .shell{grid-template-columns:minmax(0,1fr)}
+ #p2 .side,#p3 .side{display:flex;gap:5px;overflow-x:auto;border-right:0;border-bottom:1px solid var(--dash-border)}
+ #p2 .side .si,#p3 .side .si{flex:0 0 auto;width:auto;white-space:nowrap}
+ #p2 .g4,#p3 .g4{grid-template-columns:repeat(2,minmax(0,1fr))}
+ #p2 .g3,#p3 .g3{grid-template-columns:repeat(2,minmax(0,1fr))}
+ #p2 .hdr,#p3 .hdr,#p2 .admbar,#p3 .admbar{flex-wrap:wrap}
+}
+@media(max-width:520px){
+ .madhur-site .madhur-top>div:last-child{display:flex}
+ .madhur-site .madhur-top-actions button{font-size:11px;padding:6px 8px;flex:1}
+ .madhur-header .lg{min-width:125px}
+ .madhur-word{font-size:29px}
+ .madhur-header .langbar{order:4;width:100%;justify-content:flex-start}
+ .madhur-header .srch{order:5}
+ .madhur-tiles,.madhur-pick-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .madhur-tile{min-height:105px}.madhur-tile strong{font-size:14px}
+ .madhur-site .madhur-hero{min-height:400px;padding-inline:18px}
+ .madhur-hero-copy{max-width:100%}
+ .madhur-hero h2{font-size:clamp(38px,11vw,49px)}
+ .madhur-hero p{font-size:14px;max-width:320px}
+ .madhur-hero-perks{gap:7px;font-size:9px}
+ .madhur-section-title{align-items:flex-start;gap:8px}
+ .madhur-section-title a{font-size:11px}
+ .madhur-benefits{grid-template-columns:1fr 1fr;padding:12px 3px}
+ #p2 .g2,#p3 .g2,#p2 .g3,#p3 .g3,#p2 .g4,#p3 .g4{grid-template-columns:1fr}
+ #p2 .main,#p3 .main{padding:10px}
+}
