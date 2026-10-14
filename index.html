@@ -366,7 +366,7 @@ hpHTML=function(){
   var original=madhurOriginalHome(),catalog=original.slice(original.indexOf('<div class="coll">'));
   var logo='<span class="madhur-flower" aria-hidden="true">✦</span><span class="madhur-word">Madhur<small>SWEETS &amp; BAKERY</small></span>';
   var links=[['sweets','Sweets'],['dessert','Cakes'],['dessert','Dessert'],['pastry','Pastry'],['bakery','Bakery'],['snacks','Snacks'],['sweets','Gift Boxes']].map(function(x){return '<a href="#" data-view="'+x[0]+'">'+x[1]+'</a>'}).join('');
-  var tiles=[['sweets','Rasogolla &amp;<br>Syrup Sweets','madhur-rasgulla.webp'],['sweets','Sandesh','madhur-sandesh.webp'],['sweets','Premium<br>Gift Boxes','madhur-hero.webp'],['dessert','Cakes','madhur-chocolate-cake.webp'],['snacks','Biscuits &amp;<br>Bakery','madhur-cookies.webp']].map(function(x){return '<a class="madhur-tile" href="#" data-view="'+x[0]+'"><img src="assets/'+x[2]+'" alt=""><span><strong>'+x[1]+'</strong></span></a>'}).join('');
+  var tiles=[['sweets','Rasgulla','madhur-rasgulla.webp'],['sweets','Sandesh','madhur-sandesh.webp'],['sweets','Premium<br>Gift Boxes','madhur-hero.webp'],['dessert','Cakes','madhur-chocolate-cake.webp'],['snacks','Biscuits &amp;<br>Bakery','madhur-cookies.webp']].map(function(x){return '<a class="madhur-tile" href="#" data-view="'+x[0]+'"><img src="assets/'+x[2]+'" alt=""><span><strong>'+x[1]+'</strong></span></a>'}).join('');
   var picks=[['Rasogolla (Premium)','rasgulla','Soft, spongy and full of flavor','sweets'],['Kalo Jam (Rosogolla)','gulab','Rich and traditional taste','sweets'],['Chamcham','chamcham','Delicate, sweet and soft','sweets'],['Kheer Sandesh','sondesh','Classic Bengali delicacy','sweets'],['Chocolate Truffle Cake','truffle','Rich chocolate sponge','dessert'],['Assorted Bakery Cookies','assortedcookies','Freshly baked for tea time','snacks']].map(function(x){var found=pvFind(x[0]),price=found?found.p[1]:'0';return '<article class="madhur-pick pc"><button class="madhur-fav" type="button" aria-label="Save '+x[0]+'" data-madhur-fav="'+x[0]+'">♡</button><img src="'+IMG[x[1]]+'" alt="'+x[0]+'"><span class="madhur-fresh">☘ Freshly Made</span><div class="n">'+x[0]+'</div><p>'+x[2]+'</p><div class="madhur-unit">'+(x[3]==='dessert'?'1kg':'500g')+'</div><div class="pr">৳ '+Number(price).toLocaleString('en-US')+'</div><button class="add" type="button" data-n="'+x[0]+'">🛒 &nbsp;Add to Cart</button></article>'}).join('');
   var catalogFilters='<div class="fbar madhur-filters"><label for="fsel">পণ্য বাছুন</label><select id="fsel" aria-label="ক্যাটেগরি"><option value="all">সব ক্যাটেগরি</option>'+CATS.map(function(c){return '<option value="'+c[0]+'">'+c[1]+'</option>'}).join('')+'</select><button type="button" id="frange">দাম অনুযায়ী দেখুন</button></div>';
   var catalogMarkup=catalog.replace(/IDCAL Cake &amp; Pastery/g,'Madhur Sweets &amp; Bakery').replace(/<b style="color:#fff">IDCAL<\/b>/g,'<b style="color:#fff">Madhur</b>').replace(/CAKE &amp; PASTERY/g,'SWEETS &amp; BAKERY').replace('<h3>Dessert</h3>','<h3>Our Collection</h3>').replace('data-view="dessert">View All Dessert','data-view="all">View All Products').replace('<div class="crow"',catalogFilters+'<div class="crow"');
@@ -997,7 +997,7 @@ var seen=false;try{seen=localStorage.getItem(storageKey)==='seen'}catch(e){}if(!
 </script>
 
 <script src="assets/i18n-dictionary.js"></script>
-<script src="assets/bilingual.js?v=category-4"></script>
+<script src="assets/bilingual.js?v=rasgulla-label-5"></script>
 <script src="assets/commerce.js?v=top-language-4"></script>
 </body>
 </html>
