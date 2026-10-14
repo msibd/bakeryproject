@@ -40,7 +40,21 @@
     'Lens type':'লেন্সের ধরন','Lens details':'লেন্সের বিস্তারিত','← Back to types':'← ধরনে ফিরুন',
     'Pending':'অপেক্ষমাণ','Confirmed':'নিশ্চিত','Preparing':'প্রস্তুত হচ্ছে','Delivered':'পৌঁছেছে','Cancelled':'বাতিল',
     'Paid':'পরিশোধিত','Home Page':'হোমপেজ','Homepage':'হোমপেজ','Profile':'প্রোফাইল','Settings':'সেটিংস',
-    'All':'সব','All prices':'সব দাম','Sort by':'সাজান'
+    'All':'সব','All prices':'সব দাম','Sort by':'সাজান',
+    'Delivering to':'ডেলিভারি এলাকা','Dhaka ⌄':'ঢাকা ⌄','Fresh Sweets':'তাজা মিষ্টি','Gift Boxes':'উপহার বাক্স',
+    'A Taste of Tradition':'ঐতিহ্যের স্বাদ','Account':'অ্যাকাউন্ট','Cart':'কার্ট',
+    'TRADITIONAL SWEETS':'ঐতিহ্যবাহী মিষ্টি','FRESHLY MADE':'তাজা তৈরি','PERFECT FOR EVERY OCCASION':'সব অনুষ্ঠানের জন্য',
+    'Share a little':'ভাগ করে নিন একটু','sweetness':'মিষ্টি আনন্দ',
+    'From timeless Bengali sweets to freshly baked treats, make every moment special with Madhur Sweets & Bakery.':'ঐতিহ্যবাহী বাঙালি মিষ্টি থেকে সদ্য তৈরি বেকারি—মাধুরের সঙ্গে প্রতিটি মুহূর্ত হোক বিশেষ।',
+    'Shop sweets':'মিষ্টি দেখুন','Freshly Made':'তাজা তৈরি','Everyday':'প্রতিদিন','Delivery Across':'ডেলিভারি সারা','Perfect for Gifting':'উপহারের জন্য দারুণ',
+    'Loved Ones':'প্রিয়জন','Explore Now':'এখনই দেখুন','Sandesh':'সন্দেশ','Premium':'প্রিমিয়াম','Biscuits &':'বিস্কুট ও',
+    'Bestsellers':'জনপ্রিয় পণ্য','Our most loved sweets and bakery items, made fresh.':'সদ্য তৈরি আমাদের সবচেয়ে পছন্দের মিষ্টি ও বেকারি পণ্য।',
+    'View All Products':'সব পণ্য দেখুন','Soft, spongy and full of flavor':'নরম, রসালো ও সুস্বাদু','Rich and traditional taste':'ঐতিহ্যবাহী সমৃদ্ধ স্বাদ',
+    'Delicate, sweet and soft':'নরম ও মিষ্টি','Classic Bengali delicacy':'চিরচেনা বাঙালি স্বাদ','Rich chocolate sponge':'চকোলেটের সমৃদ্ধ স্বাদ',
+    'Freshly baked for tea time':'চায়ের সঙ্গে সদ্য বেক করা','Reliable delivery to your doorstep':'আপনার দরজায় নির্ভরযোগ্য ডেলিভারি',
+    'Send a Sweet Surprise':'মিষ্টি উপহার পাঠান','Gift delivery for your loved ones':'প্রিয়জনের জন্য উপহার ডেলিভারি',
+    'Made with Care':'যত্নে তৈরি','Freshly prepared sweets and bakery':'সদ্য তৈরি মিষ্টি ও বেকারি',
+    'Fresh Ingredients':'তাজা উপাদান','Made daily with quality ingredients':'মানসম্মত উপাদানে প্রতিদিন তৈরি'
   };
   var textState=new WeakMap(),attrState=new WeakMap();
   var lang='bn';
