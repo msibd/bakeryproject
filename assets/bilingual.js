@@ -55,6 +55,10 @@
     'Send a Sweet Surprise':'মিষ্টি উপহার পাঠান','Gift delivery for your loved ones':'প্রিয়জনের জন্য উপহার ডেলিভারি',
     'Made with Care':'যত্নে তৈরি','Freshly prepared sweets and bakery':'সদ্য তৈরি মিষ্টি ও বেকারি',
     'Fresh Ingredients':'তাজা উপাদান','Made daily with quality ingredients':'মানসম্মত উপাদানে প্রতিদিন তৈরি'
+    ,'Fresh Sweets | Cakes | Bakery | Gift Boxes | Easy Home Delivery Across Dhaka':'তাজা মিষ্টি | কেক | বেকারি | উপহার বাক্স | ঢাকা জুড়ে হোম ডেলিভারি'
+    ,'TRADITIONAL SWEETS • FRESHLY MADE • PERFECT FOR EVERY OCCASION':'ঐতিহ্যবাহী মিষ্টি • সদ্য তৈরি • সব অনুষ্ঠানের জন্য'
+    ,'Shop sweets →':'মিষ্টি দেখুন →','Explore Now →':'এখনই দেখুন →','View All Products →':'সব পণ্য দেখুন →'
+    ,'Search sweets, cakes, or gift boxes…':'মিষ্টি, কেক বা উপহার বাক্স খুঁজুন…'
   };
   var textState=new WeakMap(),attrState=new WeakMap();
   var lang='bn';
@@ -72,7 +76,7 @@
         else if(result)out='Results: “'+result[1]+'”';
         else if(core.indexOf(' কার্টে যোগ হয়েছে')>-1)out=core.replace(' কার্টে যোগ হয়েছে',' added to cart');
       }
-    }else out=bangla[core]||core;
+    }else out=bangla[core]||bangla[core.replace(/\u00a0/g,' ').replace(/\s+/g,' ').trim()]||core;
     return match[1]+(lang==='en'?latinDigits(out):out)+match[3];
   }
   function skip(element){return !element||/^(SCRIPT|STYLE|NOSCRIPT)$/.test(element.tagName)||!!element.closest('.langbar')}
