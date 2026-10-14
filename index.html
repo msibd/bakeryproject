@@ -298,7 +298,7 @@ svg{vertical-align:-3px}
 @media (max-width:760px){.pv{padding:12px 12px 18px}.pvt{font-size:24px}.pvdl b{flex:0 0 100%}}
 </style>
 <link rel="stylesheet" href="assets/commerce.css?v=madhur-1">
-<link rel="stylesheet" href="assets/madhur-home.css?v=responsive-2">
+<link rel="stylesheet" href="assets/madhur-home.css?v=placement-3">
 </head>
 <body data-project="bakery">
 <main class="wrap">
@@ -361,14 +361,16 @@ hpHTML=function(){
   var links=[['sweets','Sweets'],['dessert','Cakes'],['dessert','Dessert'],['pastry','Pastry'],['bakery','Bakery'],['snacks','Snacks'],['sweets','Gift Boxes']].map(function(x){return '<a href="#" data-view="'+x[0]+'">'+x[1]+' <span aria-hidden="true">⌄</span></a>'}).join('');
   var tiles=[['sweets','Rasogolla &amp;<br>Syrup Sweets','madhur-rasgulla.webp'],['sweets','Sandesh','madhur-sandesh.webp'],['sweets','Premium<br>Gift Boxes','madhur-hero.webp'],['dessert','Cakes','madhur-chocolate-cake.webp'],['snacks','Biscuits &amp;<br>Bakery','madhur-cookies.webp']].map(function(x){return '<a class="madhur-tile" href="#" data-view="'+x[0]+'"><img src="assets/'+x[2]+'" alt=""><span><strong>'+x[1]+'</strong><small>Explore Now&nbsp; →</small></span></a>'}).join('');
   var picks=[['Rasogolla (Premium)','rasgulla','Soft, spongy and full of flavor','sweets'],['Kalo Jam (Rosogolla)','gulab','Rich and traditional taste','sweets'],['Chamcham','chamcham','Delicate, sweet and soft','sweets'],['Kheer Sandesh','sondesh','Classic Bengali delicacy','sweets'],['Chocolate Truffle Cake','truffle','Rich chocolate sponge','dessert'],['Assorted Bakery Cookies','assortedcookies','Freshly baked for tea time','snacks']].map(function(x){var found=pvFind(x[0]),price=found?found.p[1]:'0';return '<article class="madhur-pick pc"><button class="madhur-fav" type="button" aria-label="Save '+x[0]+'" data-madhur-fav="'+x[0]+'">♡</button><img src="'+IMG[x[1]]+'" alt="'+x[0]+'"><span class="madhur-fresh">☘ Freshly Made</span><div class="n">'+x[0]+'</div><p>'+x[2]+'</p><div class="madhur-unit">'+(x[3]==='dessert'?'1kg':'500g')+'</div><div class="pr">৳ '+Number(price).toLocaleString('en-US')+'</div><button class="add" type="button" data-n="'+x[0]+'">🛒 &nbsp;Add to Cart</button></article>'}).join('');
+  var catalogFilters='<div class="fbar madhur-filters"><label for="fsel">পণ্য বাছুন</label><select id="fsel" aria-label="ক্যাটেগরি"><option value="all">সব ক্যাটেগরি</option>'+CATS.map(function(c){return '<option value="'+c[0]+'">'+c[1]+'</option>'}).join('')+'</select><button type="button" id="frange">দাম অনুযায়ী দেখুন</button></div>';
+  var catalogMarkup=catalog.replace(/IDCAL Cake &amp; Pastery/g,'Madhur Sweets &amp; Bakery').replace(/<b style="color:#fff">IDCAL<\/b>/g,'<b style="color:#fff">Madhur</b>').replace(/CAKE &amp; PASTERY/g,'SWEETS &amp; BAKERY').replace('<h3>Dessert</h3>','<h3>Our Collection</h3>').replace('data-view="dessert">View All Dessert','data-view="all">View All Products').replace('<div class="crow"',catalogFilters+'<div class="crow"');
   return '<div class="site madhur-site"><div class="ann madhur-top"><div class="madhur-location"><span>♧ &nbsp;Delivering to</span><button type="button" data-madhur-location>Dhaka ⌄</button></div><div class="madhur-top-message">Fresh Sweets &nbsp; | &nbsp; Cakes &nbsp; | &nbsp; Bakery &nbsp; | &nbsp; Gift Boxes &nbsp; | &nbsp; Easy Home Delivery Across Dhaka</div><div class="madhur-top-actions"><button type="button" data-screen="2:0">Customer Dashboard</button><button type="button" data-screen="3:0">Admin Dashboard</button></div></div>'
-  +'<div class="hh madhur-header"><a class="lg" href="#" data-home>'+logo+'</a><nav class="hn" aria-label="প্রধান মেনু">'+links+'</nav><div class="srch" role="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><input id="q" type="search" placeholder="Search sweets, cakes, or gift boxes…" autocomplete="off" enterkeyhint="search" aria-label="পণ্য খুঁজুন"><button type="button" class="sx" id="qx" aria-label="সার্চ মুছুন" hidden>×</button></div><button type="button" class="madhur-account" data-screen="2:0">♙ <span>Account</span></button><div class="cartf" id="cartf">'+ic(I.bag,'#151515',23)+'<b id="cn">'+cartN+'</b><span>Cart</span></div></div>'
+  +'<div class="hh madhur-header"><a class="lg" href="#" data-home>'+logo+'</a><div class="srch" role="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><input id="q" type="search" placeholder="Search sweets, cakes, or gift boxes…" autocomplete="off" enterkeyhint="search" aria-label="পণ্য খুঁজুন"><button type="button" class="sx" id="qx" aria-label="সার্চ মুছুন" hidden>×</button></div><button type="button" class="madhur-account" data-screen="2:0">♙ <span>Account</span></button><button type="button" class="com-site-link madhur-orders" data-com-open="orders">আমার অর্ডার</button><div class="cartf" id="cartf">'+ic(I.bag,'#151515',23)+'<b id="cn">'+cartN+'</b><span>Cart</span></div><nav class="hn" aria-label="প্রধান মেনু">'+links+'</nav></div>'
   +'<div id="cv" class="cv" hidden></div><div id="pv" class="pv" hidden></div>'
   +'<section class="hero madhur-hero"><div class="madhur-hero-copy"><span class="htag">TRADITIONAL SWEETS &nbsp;•&nbsp; FRESHLY MADE &nbsp;•&nbsp; PERFECT FOR EVERY OCCASION</span><h2>Share a little<em>sweetness</em></h2><p>From timeless Bengali sweets to freshly baked treats, make every moment special with Madhur Sweets &amp; Bakery.</p><div class="hb"><button class="p" type="button">Shop sweets &nbsp; →</button></div><div class="madhur-hero-perks"><span>♧ &nbsp; Freshly Made<br>Everyday</span><span>♧ &nbsp; Delivery Across<br>Dhaka</span><span>♧ &nbsp; Perfect for Gifting<br>Loved Ones</span></div><div class="hctl" hidden><button type="button" id="hp"></button>'+HS.map(function(_,i){return '<button class="dt" type="button"></button>'}).join('')+'<button type="button" id="hn2"></button></div><div id="hv" hidden></div></div></section>'
   +'<section class="madhur-tiles" aria-label="Shop by category">'+tiles+'</section>'
   +'<section class="madhur-bestsellers"><div class="madhur-section-title"><div><h2>Bestsellers</h2><p>Our most loved sweets and bakery items, made fresh.</p></div><a href="#" data-view="all">View All Products &nbsp; →</a></div><div class="madhur-pick-grid">'+picks+'</div></section>'
   +'<div class="madhur-benefits"><div><b>♧ &nbsp;Delivery Across Dhaka</b><small>Reliable delivery to your doorstep</small></div><div><b>♧ &nbsp;Send a Sweet Surprise</b><small>Gift delivery for your loved ones</small></div><div><b>♧ &nbsp;Made with Care</b><small>Freshly prepared sweets and bakery</small></div><div><b>♧ &nbsp;Fresh Ingredients</b><small>Made daily with quality ingredients</small></div></div>'
-  +'<div class="fbar madhur-filters"><select id="fsel" aria-label="ক্যাটেগরি"><option value="all">সব ক্যাটেগরি</option>'+CATS.map(function(c){return '<option value="'+c[0]+'">'+c[1]+'</option>'}).join('')+'</select><button type="button" id="frange">দাম রেঞ্জ</button></div>'+catalog.replace(/IDCAL Cake &amp; Pastery/g,'Madhur Sweets &amp; Bakery').replace(/<b style="color:#fff">IDCAL<\/b>/g,'<b style="color:#fff">Madhur</b>').replace(/CAKE &amp; PASTERY/g,'SWEETS &amp; BAKERY');
+  +catalogMarkup;
 };
 function hvRender(){
 var thumbs=HS.map(function(key,i){return '<button type="button" class="'+(i===heroI?'on':'')+'" data-hero-index="'+i+'" aria-label="'+HN[i]+' দেখুন" aria-pressed="'+(i===heroI)+'"><img src="'+IMG[key]+'" alt=""></button>'}).join('');
@@ -507,7 +509,7 @@ if(t.id==='hn2'){heroI=(heroI+1)%HS.length;hvRender();return}
 if(t.classList.contains('dt')){var k=[].indexOf.call(document.querySelectorAll('.hctl .dt'),t);heroI=k;hvRender();return}
 if(t.hasAttribute('data-hero-index')){heroI=+t.getAttribute('data-hero-index');hvRender()}
 };
-$('fsel').onchange=function(){var v=this.value;[].forEach.call(document.querySelectorAll('.crow'),function(r){r.hidden=(v!=='all'&&r.getAttribute('data-c')!==v)})};
+$('fsel').onchange=function(){cvOpen(this.value)};
 $('p0').addEventListener('change',function(e){if(e.target.id==='cvcat')cvAct('cat:'+e.target.value);else if(e.target.id==='cvprice')cvAct('price:'+e.target.value);else if(e.target.id==='cvsort'){CV.sort=e.target.value;cvRender()}});
 
 $('p0').addEventListener('input',function(e){if(e.target.id==='pvmsg')PV.o.msg=e.target.value});
@@ -516,7 +518,7 @@ $('p0').addEventListener('change',function(e){var t=e.target;if(t.id==='pvrxf')p
 var qi=$('q');qi.addEventListener('input',function(){cvSearch(this.value)});
 qi.addEventListener('keydown',function(e){if(e.key==='Escape'){if(CV.fromS)cvExit();else{cvClearQ();cvRender()}}else if(e.key==='Enter'){e.preventDefault();this.blur();var c=$('cv');if(!c.hidden)c.scrollIntoView({block:'start'})}});
 $('qx').onclick=function(){if(CV.fromS)cvExit();else{cvClearQ();if(!$('cv').hidden)cvRender()}$('q').focus()};
-$('frange').onclick=function(){toast('দাম রেঞ্জ ফিল্টার: ৳৫০ – ৳৩০০০ (ডেমো)')};
+$('frange').onclick=function(){cvOpen('all');var price=$('cvprice');if(price)price.focus()};
 }
 
 /* ================= helpers for mocks ================= */
@@ -970,7 +972,7 @@ var seen=false;try{seen=localStorage.getItem(storageKey)==='seen'}catch(e){}if(!
 </script>
 
 <script src="assets/i18n-dictionary.js"></script>
-<script src="assets/bilingual.js?v=responsive-2"></script>
-<script src="assets/commerce.js?v=madhur-1"></script>
+<script src="assets/bilingual.js?v=placement-3"></script>
+<script src="assets/commerce.js?v=placement-3"></script>
 </body>
 </html>

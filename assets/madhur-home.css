@@ -155,3 +155,41 @@ body[data-project="bakery"] #p2,body[data-project="bakery"] #p3{--dash-burgundy:
  #p2 .g2,#p3 .g2,#p2 .g3,#p3 .g3,#p2 .g4,#p3 .g4{grid-template-columns:1fr}
  #p2 .main,#p3 .main{padding:10px}
 }
+
+/* Shopping tools sit beside search; category navigation has its own row. */
+.madhur-site .madhur-header{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;padding-block:10px}
+.madhur-header .lg{order:0}
+.madhur-header .srch{order:1;flex:1 1 300px;max-width:none;min-width:170px}
+.madhur-header .srch input{min-height:42px}
+.madhur-header .langbar{order:2;margin:0;flex:none}
+.madhur-header .madhur-account{order:3;margin:0}
+.madhur-header .madhur-orders{order:4;flex:none;border:1px solid #d8b5a8;background:#fff7ef;color:#650813;border-radius:7px;padding:7px 10px;font:600 12px Arial,sans-serif;white-space:nowrap}
+.madhur-header .madhur-orders:hover{background:#f8e5d4}
+.madhur-header .cartf{order:5;margin-left:0;flex:none;border:1px solid #ead8c7;border-radius:8px;background:#fff;min-height:38px;padding:5px 10px}
+.madhur-header .hn{order:6;flex:0 0 100%;width:100%;justify-content:center;gap:clamp(12px,2vw,28px);overflow-x:auto;scrollbar-width:none;border-top:1px solid #efe3da;padding:5px 0 0}
+.madhur-header .hn a{font-size:14px;min-height:35px}
+.madhur-site .madhur-filters{display:flex;align-items:center;gap:10px;margin:8px 0 17px;padding:12px;background:#fff;border:1px solid #ead8ca;border-radius:10px}
+.madhur-filters label{font-weight:700;color:#65101a;margin-right:3px}
+.madhur-site .madhur-filters select{min-height:38px;min-width:150px;border-radius:7px}
+.madhur-site .madhur-filters #frange{min-height:38px;border-radius:7px;background:#650813;color:#fff}
+.madhur-site>.com-promo-strip{margin:12px clamp(18px,2.5vw,38px) 6px;padding:12px 16px;background:#fff4e6;border:1px solid #e8c99a;border-radius:10px;color:#650813}
+.madhur-site>.com-promo-strip .com-countdown{background:#650813}
+.madhur-site>.com-promo-strip button{border-color:#650813;color:#650813}
+.madhur-site.cvmode>.com-promo-strip{display:none}
+@media(max-width:900px){
+ .madhur-header .srch{flex-basis:calc(100% - 155px)}
+ .madhur-header .lg{min-width:135px}
+ .madhur-header .hn{order:6;justify-content:flex-start}
+ .madhur-header .langbar{margin-left:0}
+}
+@media(max-width:600px){
+ .madhur-header .lg{order:0;min-width:125px}
+ .madhur-header .langbar{order:1;margin-left:auto}
+ .madhur-header .madhur-account,.madhur-header .madhur-orders,.madhur-header .cartf{order:2}
+ .madhur-header .srch{order:3;flex:1 1 100%;max-width:none}
+ .madhur-header .hn{order:4;justify-content:flex-start}
+ .madhur-header .madhur-orders{padding:7px 8px}
+ .madhur-site .madhur-filters{flex-wrap:wrap}
+ .madhur-filters label{flex:0 0 100%}
+ .madhur-site>.com-promo-strip{margin-inline:12px}
+}

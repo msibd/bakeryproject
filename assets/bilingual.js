@@ -26,7 +26,8 @@
     'চোখ পরীক্ষার সময় নিন; পাওয়ার ও লেন্স অপ্টোমেট্রিস্ট যাচাই করবেন।':'Book an eye exam; an optometrist will check your prescription and lenses.',
     'চশমা পরা শিশু ও তার মা':'A child wearing glasses with his mother','চশমা পরা তরুণ পেশাজীবী নারী':'A young professional woman wearing glasses',
     'চশমা পরে বই পড়ছেন প্রবীণ ব্যক্তি':'An older man reading a book while wearing glasses','আগের স্লাইড':'Previous slide','পরের স্লাইড':'Next slide',
-    'স্লাইড 1 দেখুন':'Show slide 1','স্লাইড 2 দেখুন':'Show slide 2','স্লাইড 3 দেখুন':'Show slide 3'
+    'স্লাইড 1 দেখুন':'Show slide 1','স্লাইড 2 দেখুন':'Show slide 2','স্লাইড 3 দেখুন':'Show slide 3',
+    'পণ্য বাছুন':'Browse products','দাম অনুযায়ী দেখুন':'Filter by price'
   };
   var bangla={
     'Home':'হোম','Cakes':'কেক','Dessert':'ডেজার্ট','Desserts':'ডেজার্ট','Sweets':'মিষ্টি','Pastry':'পেস্ট্রি','Pastries':'পেস্ট্রি',
@@ -58,7 +59,7 @@
     ,'Fresh Sweets | Cakes | Bakery | Gift Boxes | Easy Home Delivery Across Dhaka':'তাজা মিষ্টি | কেক | বেকারি | উপহার বাক্স | ঢাকা জুড়ে হোম ডেলিভারি'
     ,'TRADITIONAL SWEETS • FRESHLY MADE • PERFECT FOR EVERY OCCASION':'ঐতিহ্যবাহী মিষ্টি • সদ্য তৈরি • সব অনুষ্ঠানের জন্য'
     ,'Shop sweets →':'মিষ্টি দেখুন →','Explore Now →':'এখনই দেখুন →','View All Products →':'সব পণ্য দেখুন →'
-    ,'Search sweets, cakes, or gift boxes…':'মিষ্টি, কেক বা উপহার বাক্স খুঁজুন…'
+    ,'Search sweets, cakes, or gift boxes…':'মিষ্টি, কেক বা উপহার বাক্স খুঁজুন…','Our Collection':'আমাদের সংগ্রহ'
   };
   var textState=new WeakMap(),attrState=new WeakMap();
   var lang='bn';
