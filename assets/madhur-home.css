@@ -212,3 +212,30 @@ body[data-project="bakery"] #p2,body[data-project="bakery"] #p3{--dash-burgundy:
 .madhur-site .madhur-top-actions .langbar button.on{background:#f7d69c;color:#540814}
 @media(max-width:760px){.madhur-site .madhur-top .madhur-top-actions{width:auto;flex-wrap:wrap;justify-content:center}.madhur-site .madhur-top{justify-content:center}}
 @media(max-width:520px){.madhur-site .madhur-top .madhur-top-actions{width:100%}.madhur-site .madhur-top-actions>button{flex:0 1 auto}}
+
+/* Responsive hero offers, with controls that remain visible over each image. */
+.madhur-site .madhur-hero{position:relative;isolation:isolate;display:flex;align-items:center;min-height:430px;padding:36px clamp(20px,7.5vw,112px) 74px;background-color:#510813;background-image:linear-gradient(90deg,#510813 0%,#570915 37%,rgba(81,8,19,.76) 56%,rgba(81,8,19,.12) 100%),var(--slide-image);background-repeat:no-repeat;background-position:center,right center;background-size:cover,52% auto;color:#fff9ed}
+.madhur-site .madhur-hero.is-first{background-image:linear-gradient(90deg,rgba(60,4,13,.7),rgba(60,4,13,.36) 40%,transparent 65%),var(--slide-image);background-size:cover,cover;background-position:center,center}
+.madhur-hero-copy{position:relative;z-index:1;max-width:min(490px,48%)}
+.madhur-hero .htag{display:block;max-width:440px;color:#ffe2aa;text-shadow:0 1px 6px #270207}
+.madhur-hero h2{font-size:clamp(43px,5vw,70px);line-height:1.04;text-shadow:0 2px 12px #26020788}
+.madhur-hero h2 span,.madhur-hero h2 em{display:block}
+.madhur-hero p{max-width:460px;line-height:1.45;text-shadow:0 1px 7px #260207}
+.madhur-hero-controls{position:absolute;z-index:2;right:clamp(18px,3vw,44px);bottom:18px;display:flex;align-items:center;gap:10px;padding:6px;border-radius:28px;background:#420511bd;box-shadow:0 4px 18px #26020755}
+.madhur-hero-controls>button{display:grid;place-items:center;width:34px;height:34px;padding:0;border:1px solid #f4d4a5;border-radius:50%;background:#fff8ec;color:#5b0b18;font:26px/1 Georgia,serif;cursor:pointer}
+.madhur-hero-controls>button:hover,.madhur-hero-controls>button:focus-visible{background:#f5c878}
+.madhur-hero-dots{display:flex;align-items:center;gap:6px}
+.madhur-hero-dots button{width:9px;height:9px;padding:0;border:0;border-radius:99px;background:#fff9ef99;cursor:pointer;transition:width .2s,background-color .2s}
+.madhur-hero-dots button.on{width:24px;background:#f6c875}
+.madhur-hero-controls button:focus-visible{outline:2px solid #fff;outline-offset:2px}
+
+/* Category captions sit on solid light panels for reliable contrast. */
+.madhur-tile{min-height:168px}
+.madhur-tile:after{background:linear-gradient(0deg,rgba(61,8,13,.34),transparent 65%)}
+.madhur-tile span{left:8px;right:8px;top:auto;bottom:8px;width:auto;padding:8px 10px;border:1px solid #f0d4aa;border-radius:9px;background:rgba(255,250,239,.96);box-shadow:0 3px 14px #3a0b1850;backdrop-filter:blur(3px);color:#541019}
+.madhur-tile strong{font:700 clamp(14px,1.25vw,17px)/1.12 Georgia,serif}
+.madhur-tile small{margin-top:5px;font:700 11px/1.2 Arial,sans-serif;color:#8e1421}
+.madhur-tile:hover span,.madhur-tile:focus-visible span{background:#fff2d9;border-color:#e8b66f}
+@media(max-width:900px){.madhur-site .madhur-hero{min-height:400px;background-size:cover,65% auto}.madhur-hero-copy{max-width:52%}}
+@media(max-width:600px){.madhur-site .madhur-hero{min-height:470px;align-items:flex-end;padding:160px 18px 72px;background-image:linear-gradient(0deg,#510813 0%,rgba(81,8,19,.93) 35%,rgba(81,8,19,.25) 100%),var(--slide-image);background-position:center,center top;background-size:cover,100% auto}.madhur-site .madhur-hero.is-first{background-image:linear-gradient(0deg,#510813 0%,rgba(81,8,19,.88) 43%,rgba(81,8,19,.2) 100%),var(--slide-image);background-position:center,center;background-size:cover,cover}.madhur-hero-copy{max-width:100%}.madhur-hero h2{font-size:clamp(38px,10vw,52px)}.madhur-hero p{font-size:14px}.madhur-hero-perks{flex-wrap:wrap;gap:6px 12px}.madhur-hero-controls{right:50%;transform:translateX(50%);bottom:14px}.madhur-tile{min-height:156px}.madhur-tile span{padding:7px 8px}}
+@media(prefers-reduced-motion:reduce){.madhur-hero-dots button{transition:none}}
